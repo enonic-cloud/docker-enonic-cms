@@ -62,5 +62,5 @@ COPY server.xml $CATALINA_HOME/conf/server.xml
 COPY launcher.sh /launcher.sh
 RUN chmod +x /launcher.sh
 
-EXPOSE 8080
+EXPOSE 8080 8009
 CMD ["/launcher.sh"]

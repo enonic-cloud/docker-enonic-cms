@@ -28,4 +28,4 @@ COPY cms.home/* /$CMS_HOME/.
 
 ## Environment variables
 
-Both database user and database name is hardcoded for ease of use to "cms", but the environment variable `ORDCMS_DB_PASSW` needs to be set either in your Dockerfile, 
+Both database user and database name is hardcoded for ease of use to "cms", but the environment variable `CMS_DB_PASSWORD` needs to be set either in your Dockerfile, 
