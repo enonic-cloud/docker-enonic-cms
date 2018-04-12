@@ -36,7 +36,7 @@ RUN gpg --keyserver pool.sks-keyservers.net --recv-keys \
 	F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23
 
 ENV TOMCAT_MAJOR 7
-ENV TOMCAT_VERSION 7.0.72
+ENV TOMCAT_VERSION 7.0.85
 ENV TOMCAT_TGZ_URL https://www.apache.org/dist/tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz
 
 RUN set -x \
@@ -58,6 +58,7 @@ RUN curl https://jdbc.postgresql.org/download/postgresql-$JDBC_VERSION.jar -o $C
 
 COPY context.xml $CATALINA_HOME/conf/context.xml
 COPY server.xml $CATALINA_HOME/conf/server.xml
+COPY logging.properties $CATALINA_HOME/conf/logging.properties
 
 COPY launcher.sh /launcher.sh
 RUN chmod +x /launcher.sh
